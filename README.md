@@ -1,0 +1,2 @@
+# practica_materializeCss_codeStack
+Archivos y ejercicios + práctica del tutorial de MaterializeCSS del canal de youtube CodeStack. Enlace: https://www.youtube.com/watch?v=F7D1ydKnA7E&amp;list=PLYAyQauAPx8maaj2i1br7-iI4AQLZkcqA El video 32 no existe, por falla en la numeración en la lista. Hay varias cosas que no me quedaron del todo claro; aún así, me sirvió bastante para comprender mejor cierta lógica.
