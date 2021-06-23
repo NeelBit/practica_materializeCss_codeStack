@@ -12,7 +12,11 @@
 
     <title>toasts_dialogs</title>
 
-
+    <script>
+        $(document).ready(function(){
+            $('.tooltipped').tooltip();
+        });
+    </script>
 
 </head>
 <body>
@@ -23,7 +27,7 @@
 
             <div class="row">
                 <div class="col l12 m12 s12">
-                    <p>Hola este es un texto, <span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Esto es una especie de pista o tooltip"> <i>esto es un tooltip</i></span> y nada mas.
+                    <p>Hola este es un texto, <span class="tooltipped red" data-position="top" data-delay="50" data-tooltip="Esto es una especie de pista o tooltip"> <i>esto es un tooltip</i></span> y nada mas.
                     </p>
                     
                     <p>
@@ -36,11 +40,11 @@
                 <div class="container">
                 
                     <div class="col l6 m6 s12">
-                        <a class="btn" onclick="Materialize.toast('Esto es un toast, rounded', 3000, 'rounded')">Toast! redondeado click acá</a>
+                        <a class="btn" onclick="M.toast({html: 'Esto es un toast', classes: 'rounded'})">Toast! redondeado click acá</a>
                     </div>
                             
                     <div class="col l6 m6 s12">
-                        <a class="btn" onclick="Materialize.toast('Esto es un toast', 3000)">Toast! rectángulo click acá</a>
+                        <a class="btn" onclick="M.toast({html: 'Esto es un toast convencional'})">Toast! rectángulo click acá</a>
                     </div>
 
                 </div>
@@ -52,7 +56,7 @@
                 <div class="container">
 
                     <div class="col l6 m6 s12">
-                        <a class="btn" onclick="Materialize.toast('I am a toast', 3000,'',function(){alert('alerta de toast desapareció')})">Toast! con funcion</a>
+                        <a class="btn" onclick="M.toast({html: 'Toast que cuando termina llama a función', completeCallback: function(){alert('Your toast was dismissed')}})">Toast! con funcion</a>
                     </div>
 
                 </div>
