@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Materialize | CodeStack - badges (distintivos)</title>
+
+		<link rel="stylesheet" type="text/css" href="css/materialize-icons.css">
+		<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+		<script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<meta name="viewport"  content="width=device-width,initial-scale=1.0"/>
+		<meta charset="utf-8">
+
+		<script>
+			$(function(){
+				$('.dropdown-trigger').dropdown({
+					coverTrigger: false, 		// false que se muestre abajo del trigger
+					hover: true,
+					outDuration: 1500,
+				});
+				
+			})
+		
+		</script>
+
+	</head>
+
+	<body class="teal">
+		<div class="container white" style="height: 100vh; padding: 20px">
+
+			<div class="row">
+				<div class="collection col l4">
+					<a href="#" class="collection-item green white-text"><span class="new badge white-text">3</span>Buzón de entrada</a>
+					<a href="#" class="collection-item"><span class="badge new" data-badge-caption="nuevos">3</span>Buzón de entrada</a>
+					<a href="#" class="collection-item"><span class="badge new red" data-badge-caption="nuevos">3</span>Buzón de entrada</a>
+				</div>
+
+				<!-- Dropdown Structure -->
+				<ul id="lista1" class="dropdown-content">
+					<li><a href="#">Tecnología<span class="badge red new">5</span></a></li>
+					<li><a href="#">Contabilidad<span class="badge">4</span></a></li>
+					<li class="divider"></li>
+					<li><a href="#">Lengua<span class="badge">4</span></a></li>
+					<li><a href="#">Matemáticas<span class="badge">4</span></a></li>
+				</ul>
+				<!-- Dropdown Trigger -->
+				<a class="dropdown-trigger btn col l6" href="#" data-target="lista1">Mostrar<i class="material-icons right">add_alert</i></a>
+			</div>
+
+		</div>
+	</body>
+</html>

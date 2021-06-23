@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Materialize | CodeStack - showStaggeredList y fadeInImage</title>
+		<link rel="stylesheet" type="text/css" href="css/materialize-icons.css">
+		<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<meta name="viewport"  content="width=device-width,initial-scale=1.0"/>
+		<meta charset="utf-8">
+
+		<style type="text/css">
+			.block
+			{
+				height: 100px;
+			}
+		</style>
+
+		<script>
+
+			/*$(document).ready(function() {
+
+			})*/
+
+			$(document).on('click', '#mostrarLista1', function(){
+				Materialize.showStaggeredList('.lista');
+			});
+
+			/*
+			$(document).on('click', '#mostrarimagen', function(){
+				Materialize.fadeInImage('.imagen');
+			});*/
+		</script>
+
+	</head>
+	<body class="teal lighten-2">
+		<div class="container white">
+
+			<!--		FUNCIONAL EN V0			-->
+
+			<div class="row red accent-1">
+
+				<!-- mostrar lista -->
+				<div class="col s12 center">
+					<a href="#!" class="btn red" id="mostrarLista1">Mostrar lista</a>
+					<ul class="lista">
+						<li style='opacity:0'><i class='material-icons'>speaker_notes</i> Frutas</li>
+						<li style='opacity:0'><i class='material-icons'>speaker_notes</i> Verduras</li>
+					</ul>
+				</div>
+
+				<!-- mostrar img -->
+				<div class="col s12 center">
+					<div >
+						<a href="#!" class="btn red" id="mostrarimagen" onclick="Materialize.fadeInImage('#miImg')">Mostrar imagen </a>
+					</div>
+					
+					<div>
+						<img src="img/1.png" class="imagen section scrollspy" id="miImg" style='opacity: 0'>
+					</div>
+					
+				</div>
+
+			</div>
+
+
+			<div class="row red lighten-3">
+
+				<div class="col l6 m6 s12">
+					<div  class="center">
+
+						<a href="#!" class="btn red" id="mostrarLista2">Mostrar lista</a>
+<!-- 						<ul class="lista">
+							<li style='opacity:0'><i class='material-icons'>speaker_notes</i> Frutas</li>
+							<li style='opacity:0'><i class='material-icons'>speaker_notes</i> Verduras</li>
+						</ul> -->
+
+					</div>
+				</div>
+
+				<div class="col l6 m6 s12">
+					<div id="fadeImage" class="valign-wrapper">
+
+						<a href="#!" class="btn red" id="mostrarimagen" onclick="Materialize.fadeInImage('#miImg2')">Mostrar imagen </a>
+			
+						<img src="img/1.png" class="imagen" id="miImg2" style="opacity: 0;">
+
+					</div>
+				</div>
+
+			</div>
+			
+		</div>
+	</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Materialize | CodeStack - 42 formularios</title>
+
+<!-- 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+	<meta charset="utf-8"> -->
+     <!-- Compiled and minified CSS -->
+<!--     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+
+    <!-- Compiled and minified JavaScript -->
+<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="css/materialize-icons.css">
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+			$('select').formSelect();
+			 $('.datepicker').datepicker({
+				selectMonths: true, // Creates a dropdown to control month
+                closeOnSelect: false, // Close upon selecting a date,
+                container: undefined, // ex. 'body' will append picker to body
+                format:'dd/mm/yyyy',
+                setDefaultDate: true,   // colocar fecha por defecto
+                defaultDate: 'now',
+                disableWeekends: false, 
+                
+                i18n: {
+                    months: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                    weekdays: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+
+                    cancel: '<i class="material-icons">clear</i> Cancelar',
+                    done: '<i class="material-icons">done</i> OK',
+                },
+			 	
+			 });
+
+			$('textarea#textarea1').characterCounter();
+
+		});
+
+		$(document).on('submit', '#registro', function(e){
+			e.preventDefault();
+			console.log($(this).serialize());
+		});
+
+	</script>
+
+</head>
+<body class="indigo lighten-5">
+
+	<nav class="white"></nav>
+	<br>
+
+	<div class="container white"> <!-- CONTAINER -->
+		<div class="row"> <!-- ROW -->
+		
+			<form method="post" id="registro">
+				<!-- nombre -->
+				<div class="input-field col l6 col m6 s12">
+					<i class="material-icons prefix">account_circle</i>
+					<input type="text" name="nombres" id="nombres">
+					<label for="nombres">Nombres</label>
+				</div>
+				<!-- apellido -->
+				<div class="input-field col l6 m6 s12">
+					<i class="material-icons prefix">account_circle</i>
+					<input type="text" name="apellidos" id="apellidos">
+					<label for="apellidos">Apellidos</label>
+				</div>
+
+				<div class="clearfix"></div>
+
+				<!-- datepicker -->
+				<div class="input-field col l4 m4 s12">
+					<i class="material-icons prefix">date_range</i>
+					<input class="datepicker" type="text" name="fecha_nacimiento" id="fecha_nacimiento">
+					<label for="fecha_nacimiento">Fecha de nacimiento</label>
+				</div>
+
+				<!-- input-field -->
+				<div class="input-field col l8 m8 s12">
+					<i class="material-icons prefix">directions</i>
+					<input type="text" name="lugar_nacimiento" id="lugar_nacimiento">
+					<label for="lugar_nacimiento">Lugar de nacimiento</label>
+				</div>
+
+				<!-- select -->
+				<div class="input-field col l6 m6 s12">
+					<i class="material-icons prefix">map</i>
+					<select name="pais">
+						<option selected disabled>Seleccione país</option> <!-- por defecto seleccionado y deshabilitado -->
+						<option value="1">El Salvador</option>
+						<option value="2">Honduras</option>
+						<option value="3">Guatemala</option>
+					</select>
+				</div>
+
+				<!-- <div class="clearfix"></div> -->
+
+				<!-- correo -->
+				<div class="input-field col l6 m6 s12">
+					<i class="material-icons prefix">email</i>
+					<input type="email" name="correo" id="correo" class="validate">
+					<label for="correo">Correo</label>
+					<span class="helper-text" data-error="Escriba un correo válido." data-success="Correo válido">Su correo es muy importante para contactarlo</span>
+				</div>
+
+				<!-- radio-button -->
+				<div class="input-field col l12 m12 s12">
+					<i class="material-icons prefix">school</i>
+					<label>¿Posee algún grado universitario?</label>
+				</div>
+
+				<div class="clearfix"></div>
+
+				<div class="input-field col l2 m2 s2">
+					<label>
+						<input type="radio" name="universitario" value="1">
+						<span>Si</span>
+					</label>
+				</div>
+				<div class="input-field col l2 m2 s2">
+					<label>
+						<input type="radio" name="universitario" value="0">
+						<span>No</span>
+					</label>
+				</div>
+
+				<div class="clearfix"></div>
+				<br>
+
+				<!-- checkbox -->
+				<div class="input-field col l12 m12 s12">
+					<i class="material-icons prefix">favorite</i>
+					<label>Seleccione sus intereses</label>
+				</div>
+				
+				<div class="clearfix"></div>
+
+				<div class="input-field col l3 m3 s6">
+					<label>
+						<input type="checkbox" name="musica" value="1">
+						<span class="hoverable">Música</span>
+					</label>
+				</div>
+				<div class="input-field col l3 m3 s6">
+					<label>
+						<input type="checkbox" name="arte" value="1">
+						<span class="hoverable">Arte</span>
+					</label>
+				</div>
+				<div class="input-field col l3 m3 s6">
+					<label>
+						<input type="checkbox" name="danza" value="1">
+						<span class="hoverable">Danza</span>
+					</label>
+				</div>
+				<div class="input-field col l3 m3 s6">
+					<label>
+						<input type="checkbox" name="literatura" value="1">
+						<span class="hoverable">Literatura</span>
+					</label>
+				</div>
+
+				<div class="clearfix"></div>
+				<br>
+
+				<!-- input-text -->
+				<div class="col l6 m6 s12">
+					<div class="input-field">
+						
+						<i class="material-icons prefix">short_text</i>
+						<input type="text" name="texto" id="texto">		<!-- placeholder="Texto breve" -->
+						<label for="texto">Texto de prueba</label>
+						<span class="helper-text" data-error="Escriba un texto breve." data-success="Texto correcto">Describa el contenido</span>
+					</div>
+				</div>
+
+				<!-- text-area -->
+				<div class="col l6 m6 s12">
+					<div class="input-field">
+						<i class="material-icons prefix">mode_edit</i>
+						<textarea id="textarea1" name="textarea1" rows="10" class="materialize-textarea" data-length="500"></textarea>
+						<label for="textarea1">Textarea</label>
+						<span class="helper-text" data-error="Hasta 500 caracteres">Describa el contenido hasta 500 caracteres</span>
+					</div>
+				</div>
+
+				<!-- switch -->
+				<div class="input-field col l12 m12 s12">
+					<i class="material-icons prefix">local_offer</i>
+					<label>¿Desea recibir ofertas por correo?</label>
+				</div>
+
+				<div class="input-field col l6 m6 s12 center">
+					<div class="switch">
+						<label class="hoverable">
+							No
+							<input type="checkbox" name="ofertas" value="1">
+							<span class="lever"></span>
+							Si
+						</label>
+					</div>
+				</div>
+
+				<!-- file-field -->
+				<div class="col l6 m6 s12">
+					<div class="file-field input-field">
+						<div class="btn waves-effect blue lighten-2">
+							<i class="material-icons right">attach_file</i>
+							<span>Seleccione archivos</span>
+							<input type="file" multiple>
+						</div>
+						<div class="file-path-wrapper"> <!--  -->
+							<input class="file-path validate" type="text" placeholder="Upload one or more files">
+						</div>
+					</div>
+
+
+				</div>
+
+
+				<div class="clearfix"></div>
+
+				<div class="col l4 m4 s12 offset-l4 offset-m4">
+					<button type="submit" class="btn waves-effect">
+						<i class="material-icons right">check</i>
+						Registrarse
+					</button>
+				</div>
+
+
+  			</form>
+
+		</div> <!-- ROW -->
+	</div> <!-- CONTAINER -->
+	<br>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="css/materialize-icons.css">
+	<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+	<script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <title>Colapsable</title>
+
+    <script>
+
+        $(document).ready(function(){
+            $('.collapsible').collapsible();
+          });
+
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <section>
+            <h2 class="center-align">Contenido colapsable (video 16)</h2>
+
+            <div class="row">
+
+                <ul class="collapsible" data-collapsible="accordion">
+                    <li>
+                      <div class="collapsible-header hoverable"><i class="material-icons">filter_drama</i>Primero accordion</div>
+                      <div class="collapsible-body z-depth-5"><span>hoverable. Lorem ipsum dolor sit amet.</span></div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header active hoverable"><i class="material-icons">place</i>Segundo accordion</div>
+                      <div class="collapsible-body z-depth-5"><span class="flow-text">Preseleccionado con active, con flow-text y hoverable. Lorem ipsum dolor sit amet.</span></div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header hoverable"><i class="material-icons">whatshot</i>Tercero accordion</div>
+                      <div class="collapsible-body z-depth-5"><span>hoverable. Lorem ipsum dolor sit amet.</span></div>
+                    </li>
+                  </ul>
+
+            </div>
+
+            <div class="row">
+                <ul class="collapsible" data-collapsible="expandable">
+                    <li>
+                        <div class="collapsible-header grey lighten-5"><i class="material-icons">filter_drama</i>Primero expandable</div>
+                        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                      </li>
+                      <li>
+                        <div class="collapsible-header grey lighten-5"><i class="material-icons">place</i>Segundo expandable</div>
+                        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                      </li>
+                      <li>
+                        <div class="collapsible-header grey lighten-5"><i class="material-icons">whatshot</i>Tercero expandable</div>
+                        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                      </li>
+                </ul>    
+
+            </div>
+
+        </section>
+    </div>
+</body>
+</html>

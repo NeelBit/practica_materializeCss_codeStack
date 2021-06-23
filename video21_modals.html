@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Materialize | CodeStack</title>
+		<link rel="stylesheet" type="text/css" href="css/materialize-icons.css">
+		<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+		<script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<meta name="viewport"  content="width=device-width,initial-scale=1.0"/>
+		<meta charset="utf-8">
+
+		<style type="text/css">
+			.block
+			{
+				height: 100px;
+			}
+		</style>
+		
+
+		<script>
+
+			$(function(){
+				$('#modal1, #modal2, #modal3, #modal4').modal({
+					dismissible: true,	// false para que cuando se haga click en el exterior no se oculte
+					opacity: 0.5, 	// transparencia del exterior
+					inDuration: 1000,	// tiempo que tarda en aparecer
+					outDuration: 20,	// tiempo que tarda en desaparecer
+					startingTop: '10%',	// atributo de style superior inicial
+					endingTop: '10%',	// atributo de style inferior inicial
+					ready: function(modal, trigger) 	// funcion para cuando se muestre
+					{
+						alert(trigger);
+					},
+					complete:function(modal, trigger)	// funcion para cuando complete
+					{
+						alert('Cerrado');
+					}
+				});
+			});
+
+		</script>
+
+	</head>
+	<body class="teal lighten-2">
+
+		<div class="container white">
+
+			<div class="row center">
+
+				<div class="col l3 m3 s12">
+
+					<a class="btn red modal-trigger block" href="#modal1">Mostrar MODAL (modal)</a>
+
+					<div id="modal1" class="modal">
+						<div class="modal-content">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus elementum dictum lacinia. Praesent odio sem, placerat ac lobortis in, rhoncus eget magna. Mauris sit amet mauris id ligula pulvinar elementum. Vivamus enim eros, ullamcorper in rhoncus eget, pretium efficitur arcu. Proin eros nunc, fermentum sed auctor sit amet, sagittis et nunc. Donec id magna eget arcu varius lobortis.
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus elementum dictum lacinia. Praesent odio sem, placerat ac lobortis in, rhoncus eget magna. Mauris sit amet mauris id ligula pulvinar elementum. Vivamus enim eros, ullamcorper in rhoncus eget, pretium efficitur arcu. Proin eros nunc, fermentum sed auctor sit amet, sagittis et nunc. Donec id magna eget arcu varius lobortis. Cras dapibus faucibus tempus. Quisque lobortis at nulla quis tincidunt. Aliquam a urna nulla. Praesent massa libero, maximus non volutpat non, consequat eu dolor. Integer aliquet finibus diam sit amet tincidunt. Curabitur ut velit iaculis, maximus nunc in, convallis enim. Maecenas in nunc gravida risus lacinia vulputate.
+							Morbi neque odio, blandit aliquam posuere et, fermentum eget eros. Suspendisse pulvinar ornare elit vitae hendrerit. Cras commodo volutpat diam, eu rhoncus nisl iaculis id. Donec molestie purus eu ligula porttitor, nec sodales orci blandit. Sed sit amet nibh et ante laoreet efficitur a eget lectus. Proin diam odio, porta ullamcorper tempor quis, gravida at eros. Phasellus nec erat quis odio bibendum scelerisque. Aliquam ante elit, blandit nec odio vel, blandit ornare magna. Proin viverra ultrices blandit. Praesent quis elit massa. Cras ac metus eu velit sagittis mollis in eu enim. Sed auctor purus mollis arcu faucibus blandit id nec odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus ut tortor a felis posuere ullamcorper quis id dolor.
+						</div>
+
+						<div class="modal-footer">
+							<a href="#" class="modal-action modal-close btn green waves-effect waves-green btn-flat">Aceptar</a>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="col l3 m3 s12">
+
+					<!-- el pie de página del modal permanece quieto -->
+					<a class="btn red modal-trigger block" href="#modal2">Mostrar MODAL (modal-fixed-footer)</a>
+
+					<div id="modal2" class="modal modal-fixed-footer">
+						<div class="modal-content">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus elementum dictum lacinia. Praesent odio sem, placerat ac lobortis in, rhoncus eget magna. Mauris sit amet mauris id ligula pulvinar elementum. Vivamus enim eros, ullamcorper in rhoncus eget, pretium efficitur arcu. Proin eros nunc, fermentum sed auctor sit amet, sagittis et nunc. Donec id magna eget arcu varius lobortis.
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus elementum dictum lacinia. Praesent odio sem, placerat ac lobortis in, rhoncus eget magna. Mauris sit amet mauris id ligula pulvinar elementum. Vivamus enim eros, ullamcorper in rhoncus eget, pretium efficitur arcu. Proin eros nunc, fermentum sed auctor sit amet, sagittis et nunc. Donec id magna eget arcu varius lobortis. Cras dapibus faucibus tempus. Quisque lobortis at nulla quis tincidunt. Aliquam a urna nulla. Praesent massa libero, maximus non volutpat non, consequat eu dolor. Integer aliquet finibus diam sit amet tincidunt. Curabitur ut velit iaculis, maximus nunc in, convallis enim. Maecenas in nunc gravida risus lacinia vulputate.
+							Morbi neque odio, blandit aliquam posuere et, fermentum eget eros. Suspendisse pulvinar ornare elit vitae hendrerit. Cras commodo volutpat diam, eu rhoncus nisl iaculis id. Donec molestie purus eu ligula porttitor, nec sodales orci blandit. Sed sit amet nibh et ante laoreet efficitur a eget lectus. Proin diam odio, porta ullamcorper tempor quis, gravida at eros. Phasellus nec erat quis odio bibendum scelerisque. Aliquam ante elit, blandit nec odio vel, blandit ornare magna. Proin viverra ultrices blandit. Praesent quis elit massa. Cras ac metus eu velit sagittis mollis in eu enim. Sed auctor purus mollis arcu faucibus blandit id nec odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus ut tortor a felis posuere ullamcorper quis id dolor.
+						</div>
+
+						<div class="modal-footer">
+							<a href="#" class="modal-action modal-close btn green">Aceptar</a>
+						</div>
+
+					</div>
+
+				</div>
+
+				
+				<div class="col l3 m3 s12">
+
+					<a class="btn red modal-trigger block" href="#modal3">Mostrar MODAL (bottom-sheet)</a>
+
+					<div id="modal3" class="modal bottom-sheet ">
+						<div class="modal-content">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus elementum dictum lacinia. Praesent odio sem, placerat ac lobortis in, rhoncus eget magna. Mauris sit amet mauris id ligula pulvinar elementum. Vivamus enim eros, ullamcorper in rhoncus eget, pretium efficitur arcu. Proin eros nunc, fermentum sed auctor sit amet, sagittis et nunc. Donec id magna eget arcu varius lobortis.
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus elementum dictum lacinia. Praesent odio sem, placerat ac lobortis in, rhoncus eget magna. Mauris sit amet mauris id ligula pulvinar elementum. Vivamus enim eros, ullamcorper in rhoncus eget, pretium efficitur arcu. Proin eros nunc, fermentum sed auctor sit amet, sagittis et nunc. Donec id magna eget arcu varius lobortis. Cras dapibus faucibus tempus. Quisque lobortis at nulla quis tincidunt. Aliquam a urna nulla. Praesent massa libero, maximus non volutpat non, consequat eu dolor. Integer aliquet finibus diam sit amet tincidunt. Curabitur ut velit iaculis, maximus nunc in, convallis enim. Maecenas in nunc gravida risus lacinia vulputate.
+							Morbi neque odio, blandit aliquam posuere et, fermentum eget eros. Suspendisse pulvinar ornare elit vitae hendrerit. Cras commodo volutpat diam, eu rhoncus nisl iaculis id. Donec molestie purus eu ligula porttitor, nec sodales orci blandit. Sed sit amet nibh et ante laoreet efficitur a eget lectus. Proin diam odio, porta ullamcorper tempor quis, gravida at eros. Phasellus nec erat quis odio bibendum scelerisque. Aliquam ante elit, blandit nec odio vel, blandit ornare magna. Proin viverra ultrices blandit. Praesent quis elit massa. Cras ac metus eu velit sagittis mollis in eu enim. Sed auctor purus mollis arcu faucibus blandit id nec odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus ut tortor a felis posuere ullamcorper quis id dolor.
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus elementum dictum lacinia. Praesent odio sem, placerat ac lobortis in, rhoncus eget magna. Mauris sit amet mauris id ligula pulvinar elementum. Vivamus enim eros, ullamcorper in rhoncus eget, pretium efficitur arcu. Proin eros nunc, fermentum sed auctor sit amet, sagittis et nunc. Donec id magna eget arcu varius lobortis. Cras dapibus faucibus tempus. Quisque lobortis at nulla quis tincidunt. Aliquam a urna nulla. Praesent massa libero, maximus non volutpat non, consequat eu dolor. Integer aliquet finibus diam sit amet tincidunt. Curabitur ut velit iaculis, maximus nunc in, convallis enim. Maecenas in nunc gravida risus lacinia vulputate.
+						</div>
+
+						<div class="modal-footer">
+							<a href="#" class="modal-action modal-close btn green">Aceptar</a>
+						</div>
+
+					</div>
+
+				</div>
+
+				<!-- modal bottom-sheet pero con footer inmovil -->
+				<div class="col l3 m3 s12">
+
+					<a class="btn red modal-trigger block" href="#modal4">Mostrar MODAL (bottom-sheet con footer inmovil)</a>
+
+					<div id="modal4" class="modal bottom-sheet modal-fixed-footer">
+						<div class="modal-content">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus elementum dictum lacinia. Praesent odio sem, placerat ac lobortis in, rhoncus eget magna. Mauris sit amet mauris id ligula pulvinar elementum. Vivamus enim eros, ullamcorper in rhoncus eget, pretium efficitur arcu. Proin eros nunc, fermentum sed auctor sit amet, sagittis et nunc. Donec id magna eget arcu varius lobortis.
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus elementum dictum lacinia. Praesent odio sem, placerat ac lobortis in, rhoncus eget magna. Mauris sit amet mauris id ligula pulvinar elementum. Vivamus enim eros, ullamcorper in rhoncus eget, pretium efficitur arcu. Proin eros nunc, fermentum sed auctor sit amet, sagittis et nunc. Donec id magna eget arcu varius lobortis. Cras dapibus faucibus tempus. Quisque lobortis at nulla quis tincidunt. Aliquam a urna nulla. Praesent massa libero, maximus non volutpat non, consequat eu dolor. Integer aliquet finibus diam sit amet tincidunt. Curabitur ut velit iaculis, maximus nunc in, convallis enim. Maecenas in nunc gravida risus lacinia vulputate.
+							Morbi neque odio, blandit aliquam posuere et, fermentum eget eros. Suspendisse pulvinar ornare elit vitae hendrerit. Cras commodo volutpat diam, eu rhoncus nisl iaculis id. Donec molestie purus eu ligula porttitor, nec sodales orci blandit. Sed sit amet nibh et ante laoreet efficitur a eget lectus. Proin diam odio, porta ullamcorper tempor quis, gravida at eros. Phasellus nec erat quis odio bibendum scelerisque. Aliquam ante elit, blandit nec odio vel, blandit ornare magna. Proin viverra ultrices blandit. Praesent quis elit massa. Cras ac metus eu velit sagittis mollis in eu enim. Sed auctor purus mollis arcu faucibus blandit id nec odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus ut tortor a felis posuere ullamcorper quis id dolor.
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus elementum dictum lacinia. Praesent odio sem, placerat ac lobortis in, rhoncus eget magna. Mauris sit amet mauris id ligula pulvinar elementum. Vivamus enim eros, ullamcorper in rhoncus eget, pretium efficitur arcu. Proin eros nunc, fermentum sed auctor sit amet, sagittis et nunc. Donec id magna eget arcu varius lobortis. Cras dapibus faucibus tempus. Quisque lobortis at nulla quis tincidunt. Aliquam a urna nulla. Praesent massa libero, maximus non volutpat non, consequat eu dolor. Integer aliquet finibus diam sit amet tincidunt. Curabitur ut velit iaculis, maximus nunc in, convallis enim. Maecenas in nunc gravida risus lacinia vulputate.
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus elementum dictum lacinia. Praesent odio sem, placerat ac lobortis in, rhoncus eget magna. Mauris sit amet mauris id ligula pulvinar elementum. Vivamus enim eros, ullamcorper in rhoncus eget, pretium efficitur arcu. Proin eros nunc, fermentum sed auctor sit amet, sagittis et nunc. Donec id magna eget arcu varius lobortis. Cras dapibus faucibus tempus. Quisque lobortis at nulla quis tincidunt. Aliquam a urna nulla. Praesent massa libero, maximus non volutpat non, consequat eu dolor. Integer aliquet finibus diam sit amet tincidunt. Curabitur ut velit iaculis, maximus nunc in, convallis enim. Maecenas in nunc gravida risus lacinia vulputate.
+						</div>
+
+						<div class="modal-footer">
+							<a href="#" class="modal-action modal-close btn green">Aceptar</a>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+	</body>
+</html>

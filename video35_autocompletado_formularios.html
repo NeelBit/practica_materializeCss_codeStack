@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="css/materialize-icons.css">
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <title>Autocompletado</title>
+
+    <script>
+        
+
+        $(document).ready(function(){
+            
+            // autocompletado:
+            $('#input_frutas').autocomplete({
+                data: {     // img externa, no podemos usar iconos material
+                    "Manzana": 'img/frutas/manzana.png',
+                    "Banana": 'img/frutas/banana.png',
+                    "Pera": 'img/frutas/pera.png',
+                    "Naranja": 'img/frutas/naranja.png',
+                    "Mandarina": 'img/frutas/mandarina.png',
+                    "Sandía": 'img/frutas/sandia.png',
+                    "Frutilla": 'img/frutas/frutilla.png',
+                    },
+                limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
+                onAutocomplete: function(val) {
+                // Callback function when value is autcompleted.
+                },
+                minLength: 2, // The minimum length of the input for the autocomplete to start. Default: 1.
+                onAutocomplete: function() {
+                    alert("presionaste un autocompletado");
+                },
+            });
+
+            // pick-data
+            $('#cumple').datepicker({    // .datepicker();  // pickadate v0 
+                selectMonths: true, // Creates a dropdown to control month
+                selectYears: 15, // Creates a dropdown of 15 years to control year, 
+
+                // v0
+                today: '<i class="material-icons">today</i> Hoy',
+                clear: '<i class="material-icons">clear</i> Limpiar',
+                close: '<i class="material-icons">done</i> OK',
+
+                closeOnSelect: false, // Close upon selecting a date,
+                container: undefined, // ex. 'body' will append picker to body
+                format: 'yyyy-mm-dd',   // formato
+                setDefaultDate: true,   // colocar fecha por defecto
+                defaultDate: new Date(2023,02,23),    // no me funcionó v0
+                disableWeekends: true,   // no funcionó v0
+                onSelect: function() {console.log("hola");},     // no me funcionó v0
+                i18n: {                 // no funcionó v0
+                    months: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                    weekdays: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+
+                    cancel: '<i class="material-icons">clear</i> Cancelar',
+                    done: '<i class="material-icons">done</i> OK',
+                },
+            });
+
+            // time-picker
+            $('#hora').timepicker({  // pickatime v0 // timepicker
+                default: 'now', // Set default time: 'now', '1:30AM', '16:30'
+                fromnow: 0,       // set default time to * milliseconds from now (using with default = 'now')
+                twelvehour: false, // Use AM/PM or 24-hour format
+                donetext: '<i class="material-icons">done</i> OK', // text for done-button
+                cleartext: '<i class="material-icons">clear</i> Limpiar', // text for clear-button
+                canceltext: '<i class="material-icons">cancel</i> Cancelar', // Text for cancel-button,
+                container: undefined, // ex. 'body' will append picker to body
+                autoclose: false, // automatic close timepicker
+                ampmclickable: true, // make AM PM clickable
+                aftershow: function(){}, //Function for after opening timepicker
+
+                i18n: { 
+                    done: '<i class="material-icons">done</i> OK', // text for done-button
+                    clear: '<i class="material-icons">clear</i> Limpiar', // text for clear-button
+                    cancel: '<i class="material-icons">cancel</i> Cancelar', // Text for cancel-button,
+
+                },
+            });
+
+            // select
+            $('select').formSelect();  //  $('select').formSelect(); // v 1.0  // material_select() v0
+
+            // switch
+            $(document).on("change", "#checkSwitch", function(e) {
+                alert("cambiaste el switch");
+
+                if($(this).is(':checked')){
+                    alert("Si");
+                }else{
+                    alert("No");
+                }
+            })
+
+         });
+
+
+    </script>
+
+</head>
+<body class="teal">
+
+    <nav class="nav blue lighten-4 center">
+        
+        <div><h1>Auto-completado</h1></div>
+        
+    </nav>
+
+    <section>
+        <div class="container">
+            <div class="row white">
+            
+                <div class="s12">
+                    <div><p><span class="flow-text">Hola, esto es un texto flow-text</span></p>
+                    </div>
+                </div>
+
+
+                <form action="" method="GET">
+
+                    <!-- autocomplete -->
+                    <div class="col s6 m6 l6">
+                        <div class="input-field">
+                            <i class="material-icons prefix">restaurant_menu</i>
+
+                            <input type="text" class="autocomplete-input" name="input_frutas" id="input_frutas">
+                            <label for="input_frutas" class="teal-text accent-4">Fruta</label>
+                        </div>
+                    </div>
+
+                    <div class="col s6 m6 l6">
+                        <div class="input-field">
+                            <i class="material-icons prefix">people</i>
+                            
+                            <input type="text" name="name" id="name" data-length="50">
+                            <label for="name">Nombre</label>
+                        </div>
+                    </div>
+
+                    <!-- date-picker -->
+                    <div class="col l6 m6 l6">
+                        <div class="input-field">
+                            <i class="material-icons prefix">cake</i>
+
+                            <input type="text" class="datepicker" name="cumple" id="cumple"> <!-- type="date" no se adapta -->
+                            <label for="cumple">Cumpleaños</label>
+                        </div>
+                    </div>
+
+                    <!-- time-picker -->
+                    <div class="col l6 m6 s6">
+                        <div class="input-field">
+                            <i class="material-icons prefix">watch_later</i>
+
+                            <input type="text" class="timepicker" name="hora" id="hora">    <!-- no valido en type='time' --> 
+                            <label for="hora">Hora</label>
+
+                        </div>
+
+                    </div>
+
+                    <!-- casillas de selección -->
+                    <div class="col l6 m6 s6">
+                        <p>
+                            <label>
+                                <input type="checkbox" />
+                                <span>Red</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" checked="checked" /> <!-- check por defecto -->
+                                <span>Yellow</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" class="filled-in" checked="checked" />
+                                <span>Filled in</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input id="indeterminate-checkbox" type="checkbox" />
+                                <span>Indeterminate Style</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" checked="checked"/>
+                                <span>Green</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" checked="checked" disabled="disabled"/> <!-- check y deshabilitado por defecto -->
+                                <span>Brown</span>
+                            </label>
+                        </p>
+
+                    </div>
+
+                    <!-- radio-button, name iguales para que se agrupen! -->
+                    <div class="col l6 m6 s6">
+<!--                         <div><p><i class="material-icons prefix">color_lens</i> Elige un color:</p></div>
+
+                        <p>
+                            <input name="group1" class="with-gap" type="radio" id="test1" /> --> <!-- class="with-gap" To create a radio button with a gap, cambia el redondito -->
+                        <!--     <label for="test1">Red</label>
+                        </p>
+                        <p>
+                            <input name="group1" type="radio" id="test2" />
+                            <label for="test2">Yellow</label>
+                        </p>
+                        <p>
+                            <input name="group1" type="radio" id="test3" /> 
+                            <label for="test3">Green</label>
+                        </p>
+                        <p>
+                            <input name="group1" type="radio" id="test4" /> --> <!-- disabled="disabled" para deshabilitar -->
+                        <!--     <label for="test4">Brown</label>
+                        </p> -->
+
+                        <!-- v1 -->
+                        <p>
+                            <label>
+                                <input name="group1" type="radio" checked />
+                                <span>Red</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input name="group1" type="radio" />
+                                <span>Yellow</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio"  />
+                                <span>Green_con-gap</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input name="group1" type="radio" disabled="disabled" />
+                                <span>Brown_deshabilitado</span>
+                            </label>
+                        </p>
+
+                    </div>
+
+                    <!-- select -->
+                    <div class="col l6 m6 s6">
+                        <div class="input-field">
+                            <select class="icons">  <!-- multiple="true"  -->
+                                <!-- <opgroup label="nameGrupo"> -->
+                                <option value="" disabled selected>Selecciona una opción</option>
+                                <option value="1" data-icon="img/1.png" class="circle">example 1</option>    <!-- left circle si queremos a la izquierda -->
+                                <option value="2" data-icon="img/2.png" class="circle">example 2</option>
+                                <option value="3" data-icon="img/3.png" class="circle">example 3</option>
+                            </select>
+                            <!-- colocar label abajo! -->
+                            <label>Seleccione un ejemplo con imágenes</label>
+                        </div>
+                    </div>
+
+                    <!-- switch -->
+                    <div class="col l6 m6 s6 center">
+
+                        <div class="switch">
+                            <label>
+                                No
+                                <input id="checkSwitch" type="checkbox">     <!-- checked="checked" si queremos habilitarlo por defecto -->
+                                <span class="lever"></span>     <!-- este es el swith en cuestion -->
+                                Si
+                            </label>
+                        </div>
+
+                    </div>
+
+
+                    
+
+                    <div class="clearfix"></div>
+
+                    <!-- button submit -->
+                    <div class="col l4 m4 s4 offset-l4 offset-m4 offset-s4 center ">
+                        <button type="submit" class="btn btn-waves">Enviar</button>
+                    </div>
+
+
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

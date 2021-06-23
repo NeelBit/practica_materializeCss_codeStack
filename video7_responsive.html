@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Materialize | CodeStack</title>
+	<link rel="stylesheet" type="text/css" href="css/materialize-icons.css">
+	<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+	<script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<meta name="viewport"  content="width=device-width,initial-scale=1.0"/>
+	<meta charset="utf-8">
+
+	<style type="text/css">
+		.block
+		{
+			height: 150px;
+		}
+
+		.block-side
+		{
+			height: 150px;
+		}
+
+		html, body
+		{
+			padding: 0px;
+			margin: 0px;
+		}
+
+		@media screen and (max-width: 600px)
+		{
+			.block-side
+			{
+				height: auto
+			}
+		}
+	</style>
+
+	<script>
+	
+		$( document ).ready(function(){
+
+			$(".button-collapse").sideNav();
+
+		})
+
+	</script>
+
+</head>
+	<body class="teal">
+
+		<!-- cabecera -->
+		<header>
+			<nav class="header teal nav-wrapper">
+
+				<div class="container">
+					<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+					
+					<ul class="right hide-on-med-and-down">
+						<li><a href="#">Inicio</a></li>
+						<li><a href="#">Posts</a></li>
+						<li><a href="#">Perfil</a></li>
+						<li><a href="#">Ayuda</a></li>
+					</ul>
+
+					<ul class="side-nav teal lighten-4" id="mobile-demo">
+						<li><a href="#">Inicio</a></li>
+						<li><a href="#">Posts</a></li>
+						<li><a href="#">Perfil</a></li>
+						<li><a href="#">Ayuda</a></li>
+					</ul>
+
+				</div>
+
+			</nav>
+		</header>
+
+		<!-- section -->
+		<section>
+			<div class="row white">
+				<br>
+				<div class="container">
+				
+					<div class="col l6 m6 s12 orange white-text">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus elementum dictum lacinia. Praesent odio sem, placerat ac lobortis in, rhoncus eget magna. Mauris sit amet mauris id ligula pulvinar elementum. Vivamus enim eros, ullamcorper in rhoncus eget, pretium efficitur arcu. Proin eros nunc, fermentum sed auctor sit amet, sagittis et nunc. Donec id magna eget arcu varius lobortis.
+						</p>
+					</div>
+
+					<div class="col l6 m6 s12 deep-orange white-text">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus elementum dictum lacinia. Praesent odio sem, placerat ac lobortis in, rhoncus eget magna. Mauris sit amet mauris id ligula pulvinar elementum. Vivamus enim eros, ullamcorper in rhoncus eget, pretium efficitur arcu. Proin eros nunc, fermentum sed auctor sit amet, sagittis et nunc. Donec id magna eget arcu varius lobortis.
+						</p>
+					</div>
+
+					<div class="clearfix"></div>
+					<br>
+
+					<div class="col l4 s12 m4 push-m8 cyan center"> <img src="img/1.png"> </div>
+					<div class="col l4 s12 m4 teal center"> <img src="img/2.png"></div>
+					<div class="col l4 s12 m4 pull-m8 orange center"> <img src="img/3.png"> </div>
+
+					<div class="clearfix"></div>
+					<br>
+
+					<div class="col l3 m3 s12 cyan block-side">
+						<ul>
+							<li>Manzanas</li>
+							<li>Peras</li>
+							<li>Uvas</li>
+						</ul>
+					</div>
+					<div class="col l9 m9 s12 orange block-side">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus elementum dictum lacinia. Praesent odio sem, placerat ac lobortis in, rhoncus eget magna. Mauris sit amet mauris id ligula pulvinar elementum. Vivamus enim eros, ullamcorper in rhoncus eget, pretium efficitur arcu. Proin eros nunc, fermentum sed auctor sit amet, sagittis et nunc. Donec id magna eget arcu varius lobortis.
+						</p>
+					</div>
+				</div>
+
+				<div class="clearfix"></div>
+				<br>
+			</div>
+		</section>
+
+		<!-- pie de pagina -->
+		<footer>
+			<div class="row">
+				<div class="container">
+
+					<div class="col l6 m6 s12">
+						<ul>
+							<li>Inicio</li>
+							<li>Posts</li>
+							<li>Perfil</li>
+							<li>Ayuda</li>
+						</ul>
+					</div>
+
+					<div class="col l6 m6 s12">
+						<p>&copy; Todos los derechos reservados</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus elementum dictum lacinia. Praesent odio sem, placerat ac lobortis in, rhoncus eget magna.</p>
+					</div>
+
+				</div>
+			</div>
+		</footer>
+
+	</body>
+</html> 

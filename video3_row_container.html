@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Materialize | CodeStack</title>
+	<link rel="stylesheet" type="text/css" href="css/materialize-icons.css">
+	<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+	<script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<meta name="viewport"  content="width=device-width,initial-scale=1.0"/>
+
+	<style type="text/css">
+
+		.fullHeightLeft
+		{
+			height: 100vh
+		}
+
+		.fullHeightRight
+		{
+			height: 100vh
+		}
+
+		/* si screen hasta maximo de 600px, left pasa a 100px de alto */
+		@media screen and (max-width: 600px)
+		{
+			.fullHeightLeft
+			{
+				height: 100px
+			}
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<div class="container">
+		<!-- en s va a ocupar todas las columnas -->
+		<div class="row">
+			<div class="col l4 m4 s12 teal fullHeightLeft">col l4 m4 s12 teal fullHeightLeft</div>
+			<div class="col l8 m8 s12 teal accent-3 fullHeightRight">col l8 m8 s12 teal accent-3 fullHeightRight</div>
+		</div>
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Materialize | CodeStack - carousel</title>
+		<link rel="stylesheet" type="text/css" href="css/materialize-icons.css">
+		<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+		<script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<meta name="viewport"  content="width=device-width,initial-scale=1.0"/>
+		<meta charset="utf-8">
+
+		<!-- 
+		<style type="text/css">
+			.block
+			{
+				height: 100px;
+			}
+		</style>
+		-->
+
+		<script>
+			/*
+			$(function(){
+				$('.carousel').carousel({
+					duration: 1000,
+					dist: -100,
+					shift: 0,
+					padding: 0,
+					fullWidth: true,
+					indicators: true,
+					noWrap: true
+				});
+			});
+			*/
+			/**/
+			$(function() {
+
+				$('#carousel1').carousel({
+					duration: 1000,
+					dist: -100,
+					shift: 0,
+					padding: 0,
+					fullWidth: true,
+					indicators: true,
+					noWrap: true
+				});
+
+				$('#carousel2').carousel({
+					duration: 200, // lo que tarda en mover la transición
+					dist: -200, // la sensación de distancia. numero negativo van atras las demás img
+					shift: 100, // la distancia entre las img, espacio entre el elemento central y las demás
+					padding: 100, // distancia entre elementos no central
+					fullWidth: false, // que la imagen ocupe toda la pantalla
+					indicators: true, // indicador
+					noWrap: false // false para que dé la vuelta el carousel
+				});
+
+				//$('.carousel').carousel();
+
+
+
+			});
+/*
+			$(function(){
+				$('#carousel2').carousel({
+					duration: 3000,
+					dist: -100,
+					shift: 0,
+					padding: 0,
+					fullWidth: true,
+					indicators: true,
+					noWrap: true
+				});
+			});
+			*/
+
+		</script>
+
+	</head>
+	<body class="teal lighten-2">
+		<div class="container">
+			<div class="row">
+
+				<div class="col l12 m12 s12 red">
+
+					<div id="carousel1" class="carousel col l6 m6 s12 offset-l3 offset-m3">
+
+						<!-- crear elemento fijo: -->
+						<div class="carousel-fixed-item center">
+
+							<!-- enlace en btn que abre en pestaña diferente! -->
+							<button onclick="window.open('https://www.google.com/ncr', '_blank')" class="btn waves-effect white grey-text darken-text-2">
+								button-ir a google con button
+							</button>
+							
+							<a href='https://www.google.com/ncr' target="_blank" class="btn waves-effect white grey-text darken-text-2">button-ir a google</a>
+							
+						</div>
+
+						<a class="carousel-item" href="#"><img src="img/1.png"></a>
+						<a class="carousel-item" href="#"><img src="img/2.png"></a>
+						<a class="carousel-item" href="#"><img src="img/3.png"></a>
+						<a class="carousel-item" href="#"><img src="img/1.png"></a>
+						<a class="carousel-item" href="#"><img src="img/2.png"></a>
+						<a class="carousel-item" href="#"><img src="img/3.png"></a>
+			        </div>
+
+			    </div>
+				
+			</div>
+
+			<div class="row blue">
+
+				<div class="carousel center col l12 m12 s12" id="carousel2">
+					<a class="carousel-item" href="#"><img src="img/1.png"></a>
+					<a class="carousel-item" href="#"><img src="img/2.png"></a>
+					<a class="carousel-item" href="#"><img src="img/3.png"></a>
+					<a class="carousel-item" href="https://www.google.com/ncr" target="_blank" class="btn waves-effect"><button>Ir a google</button></a>
+					<a class="carousel-item" href="#"><img src="img/1.png"></a>
+					<a class="carousel-item" href="#"><img src="img/2.png"></a>
+					<a class="carousel-item" href="#"><img src="img/3.png"></a>
+				</div>
+
+			</div>
+
+		</div>
+	</body>
+</html>

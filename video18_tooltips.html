@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="css/materialize-icons.css">
+	<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+	<script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <title>tooltips</title>
+
+    <script>
+
+        $(document).ready(function(){
+            $('.tooltipped').tooltip({delay: 50});
+
+            $('#enlaceDuck').tooltip({
+                position:"top",
+                delay: "250",
+                tooltip:"Ir a DuckDuckGo!",
+                HTML: false
+            });
+
+        });
+
+    </script>
+
+</head>
+<body class="orange darken-2">
+    <div class="container red lighten-3">
+        <section>
+            <h2 class="center-align">Tooltips (video 18)</h2>
+
+            <div class="row">
+
+                <form action="" class="col l12 m12 s12">
+
+                    <div class="col l4 m4 s12 green lighten-4 center">
+
+                        <input type="button" value="Botón de prueba" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Esto es un tooltipped de prueba para el boton">
+
+                    </div> 
+
+                    <div class="col l4 m4 s12 green lighten-2 input-field">
+
+                        <input type="text" name="nombre" id="nombre" title="nombre esto es un simple title" class="validate">
+                        <label class="black-text" for="nombre">nombre</label>
+
+                    </div>  
+
+                    <div class="col l4 m4 s12 green input-field tooltipped" data-position="top" data-delay="50" data-tooltip="Ingrese número de telefono">
+
+                        <input type="tel" name="tel" id="tel" class="validate">
+                        <label class="black-text" for="tel">telefono</label>
+                    
+                    </div>  
+
+                </form>
+
+            </div>
+
+            <div class="row">
+                
+                    <div class="col l4 m4 s12 center offset-l4 offset-m4 red">
+
+                        <a href="https://www.google.com/ncr" target="_blank" class="btn waves-effect tooltipped" data-position="bottom" data-delay="250" data-tooltip="Este es un enlace a google!">ir a google</a>
+
+                    </div>
+
+                    <div class="col l4 m4 s12 blue center">
+                        
+                        <!-- tooltip definido en jquery -->
+                        <a href="https://www.duckduckgo.com/" target="_blank" id="enlaceDuck" class="btn waves-effect tooltipped">ir a DuckDuckGo</a>
+
+                    </div>
+
+            </div>
+
+        </section>
+    </div>
+</body>
+</html>

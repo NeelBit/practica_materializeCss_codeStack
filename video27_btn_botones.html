@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Materialize | CodeStack - botones</title>
+	<link rel="stylesheet" type="text/css" href="css/materialize-icons.css">
+	<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+	<script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<meta name="viewport"  content="width=device-width,initial-scale=1.0"/>
+	<meta charset="utf-8">
+
+</head>
+<body class="teal">
+		<div class="container white" style="height: 100vh; padding: 20px">
+
+			<div class="row">
+				<a href="#" class="btn waves-effect waves-light">Enviar</a>
+				<a href="#" class="btn btn-flat red btn-large waves-effect">Entrar<i class="material-icons right">cloud</i></a>
+				<a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+				<a class="btn btn-flat btn-large waves-effect waves-light tooltipped" data-tooltip="Esto es un btn plano (btn-flat)"><i class="material-icons">add</i></a>
+				<!-- no recomendado usar input -->
+				<input type="button" class="btn waves-effect tooltipped" name="" value="Entrar" data-tooltip="Esto es un input">
+				<!-- type="submit" para poder enviar en form-->
+				<button class="btn waves-effect red btn-small tooltipped disabled" data-tooltip="Este es un button, esta disabled" type="submit">Aceptar <i class="material-icons right">add_location</button>
+				
+				<!-- Horizontal FAB -->
+				<div class="fixed-action-btn horizontal">
+					<a class="btn-floating btn-large red"><i class="large material-icons">mode_edit</i></a>
+					<ul>
+						<li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+						<li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+						<li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+						<li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+					</ul>
+				</div>
+
+			</div>
+
+		</div>
+	</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="css/materialize-icons.css">
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+    <script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <title>btn-floating</title>
+
+    <script>
+
+        $(document).ready(function(){
+            // btn con hover desplegable
+            $('#segundoDesplegable').dropdown({
+                inDuration: 300,
+                outDuration: 225,
+                constrainWidth: true, // Does not change width of dropdown to that of the activator. true para que ocupe todo el tamaño del btn
+                hover: true, // Activate on hover
+                gutter: 0, // Spacing from edge
+                belowOrigin: true, // Displays dropdown below the button. true que la lista aparezca abajo del btn
+                alignment: 'right', // Displays dropdown with edge aligned to the left of button. por defecto left
+                stopPropagation: false // Stops event propagation
+                }
+            );
+
+            // 
+
+
+        });
+
+    </script>
+
+</head>
+<body class="teal">
+    <div class="container green lighten-4">
+        <section>
+
+            <div class="row">
+
+                <div>
+                    <h2 class="center-align">Listas desplegables</h2>
+                </div>
+
+                <div class="col l6 m6 s12">
+                    
+                    <div class="center yellow">
+                        <input type="button" value="mostrar lista" class="btn dropdown-button red accent-4 tooltipped" data-position="top" data-tooltip="Esto esta hecho con input" data-activates="lista1">
+
+                        <ul id="lista1" class="dropdown-content" >
+                            <li>
+                                <a href="#"> <i class="material-icons"> home </i> Inicio</a>
+                            </li>
+
+                            <li>
+                                <a href="#"> <i class="material-icons"> chat </i> 2 categoría</a>
+                            </li>
+
+                            <li>
+                                <a href="#"> <i class="material-icons"> cloud </i> 3 categoría</a>
+                            </li>
+
+                            <li>
+                                <a href="#"> <i class="material-icons">view_module</i> 4 categoría</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    
+
+                </div>
+
+                <div class="col l6 m6 s12">
+                    <div class="center orange">
+
+                        <!-- <input type="button" value="mostrar lista" id="segundoDesplegable" class="btn dropdown-button red accent-4" data-activates="lista2"> -->
+                        <button type="submit" id="segundoDesplegable" class="btn dropdown-button red accent-4 waves-light waves-effect tooltipped" data-position="top" data-tooltip="Esto esta hecho con button" data-activates="lista2">Mostrar lista</button>
+
+                        <ul id="lista2" class="dropdown-content" >
+                            <li>
+                                <a href="#"> <i class="material-icons"> home </i> Inicio</a>
+                            </li>
+
+                            <li>
+                                <a href="#"> <i class="material-icons"> chat </i> Chat</a>
+                            </li>
+
+                            <li>
+                                <a href="#"> <i class="material-icons"> cloud </i> Subir</a>
+                            </li>
+
+                            <li>
+                                <a href="#"> <i class="material-icons">view_module</i> Más</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="clearfix"></div>
+                <div class="separator red"></div>
+
+
+                <div class="col l12">
+
+                    <h2>hola</h2>
+
+                    
+                </div>
+
+                <div class="col l12">
+
+                    <!-- btn-floating -->
+                    <div>
+                        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+                    </div>
+
+                    <!-- btn flotando fijo -->
+                    <div class="fixed-action-btn">
+                        <a class="btn-floating btn-large red">
+                            <i class="large material-icons">mode_edit</i>
+                        </a>
+
+                        <ul>
+                            <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+                            <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+                            <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+                            <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+                        </ul>
+
+                    </div>
+
+                    <!-- FAB to toolbar -->
+                    <!--<div class="fixed-action-btn toolbar">
+                        <a class="btn-floating btn-large red">
+                            <i class="large material-icons">mode_edit</i>
+                        </a>
+                        <ul>
+                            <li class="waves-effect waves-light"><a href="#!"><i class="material-icons">insert_chart</i></a></li>
+                            <li class="waves-effect waves-light"><a href="#!"><i class="material-icons">format_quote</i></a></li>
+                            <li class="waves-effect waves-light"><a href="#!"><i class="material-icons">publish</i></a></li>
+                            <li class="waves-effect waves-light"><a href="#!"><i class="material-icons">attach_file</i></a></li>
+                        </ul>
+                    </div>
+                    -->
+                    
+
+                </div>
+
+
+
+            </div>
+
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="css/materialize-icons.css">
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+    <script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <title>toasts_dialogs</title>
+
+
+
+</head>
+<body>
+    <div class="container red lighten-3">
+        <section class="section">
+
+            <h2 class="center-align">toasts_dialogs (video 17)</h2>
+
+            <div class="row">
+                <div class="col l12 m12 s12">
+                    <p>Hola este es un texto, <span class="tooltipped" data-position="top" data-delay="50" data-tooltip="Esto es una especie de pista o tooltip"> <i>esto es un tooltip</i></span> y nada mas.
+                    </p>
+                    
+                    <p>
+                        otro párrafo
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row green">
+                <div class="container">
+                
+                    <div class="col l6 m6 s12">
+                        <a class="btn" onclick="Materialize.toast('Esto es un toast, rounded', 3000, 'rounded')">Toast! redondeado click acá</a>
+                    </div>
+                            
+                    <div class="col l6 m6 s12">
+                        <a class="btn" onclick="Materialize.toast('Esto es un toast', 3000)">Toast! rectángulo click acá</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row grey">
+
+                <div class="container">
+
+                    <div class="col l6 m6 s12">
+                        <a class="btn" onclick="Materialize.toast('I am a toast', 3000,'',function(){alert('alerta de toast desapareció')})">Toast! con funcion</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </div>
+</body>
+</html>

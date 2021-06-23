@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="css/materialize-icons.css">
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+    <script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <title>pre-loader</title>
+
+    <script>
+        
+
+        $(document).ready(function(){
+            // btn con hover desplegable
+            $('#segundoDesplegable').dropdown({
+                inDuration: 300,
+                outDuration: 225,
+                constrainWidth: true, // Does not change width of dropdown to that of the activator. true para que ocupe todo el tamaño del btn
+                hover: true, // Activate on hover
+                gutter: 0, // Spacing from edge
+                belowOrigin: true, // Displays dropdown below the button. true que la lista aparezca abajo del btn
+                alignment: 'right', // Displays dropdown with edge aligned to the left of button. por defecto left
+                stopPropagation: false // Stops event propagation
+                }
+            );
+
+
+        }); 
+        
+        
+
+        /*
+        $(Function(){
+            // código para que la barra se mueva:
+            var porcentaje = 0;
+            setInterval(Function(){
+
+                $('#progreso').css('width', porcentaje + '%');
+                porcentaje+=porcentaje;
+                
+            }, 500);
+        })*/
+
+        $(document).ready(function(){
+            var porcentaje = 0;
+            setInterval(cambio, 100);
+
+            function cambio(){
+                $('#progreso').css('width', porcentaje + '%');
+                if (porcentaje >= 100) {
+                    clearInterval();
+                }else{
+                    porcentaje++;
+                }
+                
+            }
+         });
+
+    </script>
+
+</head>
+<body class="teal">
+    <div class="container green lighten-4">
+        <section>
+
+            <div class="row">
+
+                <div>
+                    <h2 class="center-align">Listas desplegables</h2>
+                </div>
+
+                <div class="col l6 m6 s12">
+                    
+                    <div class="center yellow">
+                        <input type="button" value="mostrar lista" class="btn dropdown-button red accent-4 tooltipped" data-position="top" data-tooltip="Esto esta hecho con input" data-activates="lista1">
+
+                        <ul id="lista1" class="dropdown-content" >
+                            <li>
+                                <a href="#"> <i class="material-icons"> home </i> Inicio</a>
+                            </li>
+
+                            <li>
+                                <a href="#"> <i class="material-icons"> chat </i> 2 categoría</a>
+                            </li>
+
+                            <li>
+                                <a href="#"> <i class="material-icons"> cloud </i> 3 categoría</a>
+                            </li>
+
+                            <li>
+                                <a href="#"> <i class="material-icons">view_module</i> 4 categoría</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    
+
+                </div>
+
+                <div class="col l6 m6 s12">
+                    <div class="center orange">
+
+                        <!-- <input type="button" value="mostrar lista" id="segundoDesplegable" class="btn dropdown-button red accent-4" data-activates="lista2"> -->
+                        <button type="submit" id="segundoDesplegable" class="btn dropdown-button red accent-4 waves-light waves-effect tooltipped" data-position="top" data-tooltip="Esto esta hecho con button" data-activates="lista2">Mostrar lista</button>
+
+                        <ul id="lista2" class="dropdown-content" >
+                            <li>
+                                <a href="#"> <i class="material-icons"> home </i> Inicio</a>
+                            </li>
+
+                            <li>
+                                <a href="#"> <i class="material-icons"> chat </i> Chat</a>
+                            </li>
+
+                            <li>
+                                <a href="#"> <i class="material-icons"> cloud </i> Subir</a>
+                            </li>
+
+                            <li>
+                                <a href="#"> <i class="material-icons">view_module</i> Más</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="clearfix"></div>
+                <div class="separator red"></div>
+
+
+                <div class="col l12 m12 s12">
+
+                    <h2>hola</h2>
+
+                </div>
+
+                <!-- pre-loader - pre_cargadores -->
+                <div class="col l3 m3 s3">
+
+                    <div class="progress">
+
+                        <div class="determinate blue" style="width: 50%"></div>
+
+                    </div>
+
+                </div>
+
+                <!-- carga indeterminada -->
+                <div class="col l3 m3 s3">
+
+                    <div class="progress">
+
+                        <div class="indeterminate red"></div>
+
+                    </div>
+
+                </div>
+
+                <div class="col l3 m3 s3 center">
+
+                    <!-- pre_loader circle -->
+                    <div class="preloader-wrapper small active">
+                        <div class="spinner-layer spinner-red-only"> <!-- determinar color del circle -->
+
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="gap-patch">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="circle-clipper right"> <!-- quitando esto hace hipnotiza un poco xD -->
+                                <div class="circle"></div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Circular Flashing Colors -->
+                <div class="col l3 m3 s3 center">
+
+                    <div class="preloader-wrapper big active">
+                        <div class="spinner-layer spinner-blue">
+
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div>
+                                
+                            <div class="gap-patch">
+                                <div class="circle"></div>
+                            </div>
+
+                            <div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
+
+                        </div>
+
+                        <div class="spinner-layer spinner-red">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div><div class="gap-patch">
+                                <div class="circle"></div>
+                            </div><div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                    
+                        <div class="spinner-layer spinner-yellow">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div><div class="gap-patch">
+                                <div class="circle"></div>
+                            </div><div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                    
+                        <div class="spinner-layer spinner-green">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div><div class="gap-patch">
+                                <div class="circle"></div>
+                            </div><div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="clearfix"></div>
+
+                <!-- barra que se mueve cada 1/2 segundo -->
+                <div class="col l12 m12 s12">
+                    <div class="progress" >
+                        <div class="determinate" style="width: 0%" id="progreso"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </div>
+</body>
+</html>
